@@ -21,7 +21,7 @@ describe('Testing the Express app', () => {
     expect(response.body.token).toBeTruthy();
   });
 
-  test('Should sign in a user with basic auth credentials', () => {
+  test('Should sign in a user with basic auth credentials', async () => {
 
     const response = await request.post('/signin').auth(username, password);
 
